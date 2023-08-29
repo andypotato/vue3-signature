@@ -143,6 +143,9 @@ const undo = () => {
     state.sig.fromData(data);
   }
 };
+const getSignaturePad = () => {
+  return state.sig;
+};
 const addWaterMark = (data: Watermark) => {
   if (!(Object.prototype.toString.call(data) == "[object Object]")) {
     throw new Error("Expected Object, got " + typeof data + ".");
@@ -184,6 +187,7 @@ defineExpose({
   undo,
   addWaterMark,
   fromDataURL,
+  getSignaturePad,
 });
 </script>
 

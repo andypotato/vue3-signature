@@ -1,22 +1,21 @@
 <template>
 
-    <Vue3Signature  ref="signature1" :sigOption="state.option" :w="'1280px'" :h="'400px'"
-                  :disabled="state.disabled" class="example"></Vue3Signature>
-    <button @click="save('image/jpeg')">Save</button>
-    <button @click="clear">Clear</button>
-    <button @click="undo">Undo</button>
-    <button @click="addWaterMark">addWaterMark</button>
-    <button @click="fromDataURL">fromDataURL</button>
-    <button @click="handleToggleDisabled">ToggleDisabled</button>
-
-
-
+  <Vue3Signature ref="signature1"
+    :sigOption="state.option"
+    :w="'1280px'" :h="'400px'"
+    :disabled="state.disabled" class="example">
+  </Vue3Signature>
+  <button @click="save('image/jpeg')">Save</button>
+  <button @click="clear">Clear</button>
+  <button @click="undo">Undo</button>
+  <button @click="addWaterMark">addWaterMark</button>
+  <button @click="fromDataURL">fromDataURL</button>
+  <button @click="handleToggleDisabled">ToggleDisabled</button>
 </template>
 
 <script setup>
-import {reactive, ref } from 'vue'
-// import vue3signature from "../../lib/index";
 
+import { reactive, ref } from 'vue';
 
 const state = reactive({
   count: 0,
@@ -25,7 +24,7 @@ const state = reactive({
     backgroundColor: "rgb(255,255,255)"
   },
   disabled: false
-})
+});
 
 const signature1 = ref(null)
 
