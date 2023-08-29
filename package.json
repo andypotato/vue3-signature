@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "default-passive-events": "^2.0.0",
-    "signature_pad": "^3.0.0-beta.4",
+    "signature_pad": "^4.1.6",
     "vue": "^3.2.37"
   },
   "devDependencies": {
